@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 const steps = [
   {
     number: "1",
@@ -22,21 +24,27 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section className="px-6 py-20 max-w-3xl mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
-        How this works{" "}
-        <span className="text-zinc-500">(it&apos;s embarrassingly simple)</span>
-      </h2>
+      <FadeIn>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+          How this works{" "}
+          <span className="text-zinc-500">
+            (it&apos;s embarrassingly simple)
+          </span>
+        </h2>
+      </FadeIn>
       <div className="space-y-10">
-        {steps.map((step) => (
-          <div key={step.number} className="flex gap-6">
-            <span className="text-3xl font-bold text-zinc-600 shrink-0">
-              {step.number}.
-            </span>
-            <div>
-              <h3 className="text-xl font-bold text-white">{step.title}</h3>
-              <p className="mt-2 text-zinc-400">{step.description}</p>
+        {steps.map((step, i) => (
+          <FadeIn key={step.number} delay={i * 150}>
+            <div className="flex gap-6">
+              <span className="text-3xl font-bold text-zinc-600 shrink-0">
+                {step.number}.
+              </span>
+              <div>
+                <h3 className="text-xl font-bold text-white">{step.title}</h3>
+                <p className="mt-2 text-zinc-400">{step.description}</p>
+              </div>
             </div>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </section>
