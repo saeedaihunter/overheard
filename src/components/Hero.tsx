@@ -16,7 +16,7 @@ export default function Hero() {
         style={{ animationDelay: "100ms" }}
       >
         Your competitors are posting stuff right now
-        <span className="text-[var(--color-text-muted)]"> and you have no idea.</span>
+        <span className="text-[var(--color-text-muted)]"> and it&apos;s hard for you to keep up with all of them.</span>
       </h1>
 
       <div
@@ -52,7 +52,7 @@ export default function Hero() {
           </svg>
         </a>
         <span className="text-sm text-[var(--color-text-muted)]">
-          Free forever. Not kidding.
+          Free for the first 100 users.
         </span>
       </div>
     </section>

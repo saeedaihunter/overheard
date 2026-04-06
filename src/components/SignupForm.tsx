@@ -63,7 +63,7 @@ export default function SignupForm() {
           Alright, let&apos;s set you up.
         </h2>
         <p className="text-[var(--color-text-muted)] mb-12 text-lg">
-          Takes about 60 seconds. Free forever — no credit card, no catch.
+          Takes about 60 seconds. Free for the first 100 users — no credit card, no catch.
         </p>
       </FadeIn>
 

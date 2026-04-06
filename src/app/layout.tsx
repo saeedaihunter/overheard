@@ -19,9 +19,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Overheard — Your competitors are posting stuff and you have no idea",
+  title: "Overheard — Your competitors are posting stuff and it's hard to keep up",
   description:
-    "We monitor LinkedIn, Reddit, YouTube, Instagram, news sites, and competitor blogs — then send you one short daily digest. Early access is free forever.",
+    "We monitor LinkedIn, Reddit, YouTube, Instagram, news sites, and competitor blogs — then send you one short daily digest. Free for the first 100 users.",
 };
 
 export default function RootLayout({
