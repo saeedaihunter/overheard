@@ -1,8 +1,39 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), Georgia, serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+
+  --color-surface: #0a0a0c;
+  --color-surface-raised: #131316;
+  --color-surface-overlay: #1a1a1f;
+  --color-border: #27272a;
+  --color-border-subtle: #1e1e22;
+  --color-text-primary: #f0f0f2;
+  --color-text-secondary: #8b8b96;
+  --color-text-muted: #5a5a65;
+  --color-accent: #34d399;
+  --color-accent-muted: #059669;
+  --color-amber: #f59e0b;
+  --color-amber-muted: #92400e;
+}
+
 body {
-  background-color: #09090b;
-  color: #fafafa;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+/* Grain texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
 /* Hero staggered entrance */
@@ -25,10 +56,10 @@ body {
 /* Pulsing live dot */
 @keyframes pulse-dot {
   0%, 100% {
-    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.5);
   }
   50% {
-    opacity: 0.4;
+    box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
   }
 }
 
